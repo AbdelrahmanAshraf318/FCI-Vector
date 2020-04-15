@@ -1,0 +1,144 @@
+#ifndef FCIVECTOR_H_INCLUDED
+#define FCIVECTOR_H_INCLUDED
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cstring>
+#include <string.h>
+#include <iterator>
+
+using namespace std;
+
+template <class T>
+
+class FciVector
+{
+private:
+    T *elements;
+    int  numberOfElements;
+    int capacity;
+public:
+    FciVector()
+        {
+            elements=new T[1];
+            capacity=1;
+            numberOfElements=0;
+        }
+    int size1()
+    {
+        return this->numberOfElements;
+    }
+    int get_capacity()
+    {
+        return this->capacity;
+    }
+    bool empty1()
+    {
+        if(size1()==0)
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+    T &operator[](int index)
+    {
+       return elements[index];
+    }
+    T *Begin()
+    {
+        return elements;
+    }
+    T &back1()
+    {
+        return elements[size1()-1];
+    }
+    T &front1()
+    {
+        return elements[0];
+    }
+    void Insert(T *position , T val)
+    {
+        capacity*=2;
+        int k=0;
+        for(int i=0 ; i<numberOfElements ; i++)
+        {
+            if(*position==elements[i])
+            {
+             numberOfElements+=1;
+             T *elements1 = new T[capacity*2];
+        for(int j=0 ; j<numberOfElements ; j++)
+        {
+            T temp;
+            if(j==i)
+            {
+                temp = elements[j];
+                elements1[k]=val;
+                elements1[k+1]=temp;
+                k+=2;
+            }
+            else
+            {
+                elements1[k]=elements[j];
+                k++;
+            }
+        }
+        for(int n=0 ; n<size1() ; n++)
+        {
+           elements[n]=elements1[n];
+        }
+        break;
+            }
+            else if(*position!=elements[i]&&i==size1()-1)
+            {
+                cout<<"Out of Boundary\n";
+                break;
+            }
+
+        }
+    }
+    void Push_Back(T val)
+    {
+
+        if(numberOfElements==capacity){
+            T *Temparr= new T[capacity*2];
+        for(int i=0;i<numberOfElements;i++)
+            Temparr[i]=elements[i];
+        delete[] elements;
+        capacity*=2;
+        elements=Temparr;
+        }
+        elements[numberOfElements]=val;
+        numberOfElements++;
+    }
+    void PopBack()
+    {
+        numberOfElements = numberOfElements-1;
+    }
+    void Clear()
+    {
+        numberOfElements=0;
+    }
+    void Erase(int *position)
+    {
+        int b = *position;
+        b=b-1;
+        for(int i=0 ; i<numberOfElements ; i++)
+        {
+            if(i==b)
+            {
+                    elements[i]=elements[i+1];
+                  numberOfElements-=1;
+                  break;
+            }
+        }
+    }
+    /*~FciVector()
+    {
+        delete[]elements;
+    }*/
+};
+
+
+#endif // FCIVECTOR_H_INCLUDED

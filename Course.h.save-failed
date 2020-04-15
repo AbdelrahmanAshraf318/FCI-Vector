@@ -1,0 +1,39 @@
+#ifndef COURSE_H_INCLUDED
+#define COURSE_H_INCLUDED
+#include <iostream>
+#include <cstring>
+#include <string.h>
+using namespace std;
+
+class Course
+{
+private:
+    string CourseName;
+    string CourseCode;
+    char CourseGrade;
+    float CoursePoint;
+    int CourseYear;
+    int CourseSemester;
+public:
+    Course(string CourseName , string CourseCode , char CourseGrade  , float CoursePoint , int CourseYear , int CourseSemester)
+    {
+        this->CourseName=CourseName;
+        this->CourseCode=CourseCode;
+        this->CourseGrade=CourseGrade;
+        this->CoursePoint=CoursePoint;
+        this->CourseYear=CourseYear;
+        this->CourseSemester=CourseSemester;
+    }
+    void PrintCourseInfo()
+    {
+        cout<<"CourseName: "<<CourseName<<endl;
+        cout<<"CourseCode: "<<CourseCode<<endl;
+        cout<<"CourseGrade: "<<CourseGrade<<endl;
+        cout<<"CoursePoint: "<<CoursePoint<<endl;
+        cout<<"CourseYear: "<<CourseYear<<endl;
+        cout<<"CourseSemester: "<<CourseSemester<<endl;
+    }
+};
+
+
+#endif // COURSE_H_INCLUDED

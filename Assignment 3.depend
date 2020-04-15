@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1577452101 source:d:\ramos\codes\assignment 3\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+	<cstring>
+	<string.h>
+	"FciVector.h"
+	"Student.h"
+	"Course.h"
+
+1577453006 d:\ramos\codes\assignment 3\fcivector.h
+	<iostream>
+	<cstring>
+	<string.h>
+
+1577451936 d:\ramos\codes\assignment 3\student.h
+	<iostream>
+	<cstring>
+	<string.h>
+	"Course.h"
+	"FciVector.h"
+
+1576945908 d:\ramos\codes\assignment 3\course.h
+	<iostream>
+	<cstring>
+	<string.h>
+
+1577454160 source:d:\ramos\codes\assignment 3   abdelrahman ashraf 20180150   g11\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+	<cstring>
+	<string.h>
+	"FciVector.h"
+	"Student.h"
+	"Course.h"
+
+1577453767 d:\ramos\codes\assignment 3   abdelrahman ashraf 20180150   g11\fcivector.h
+	<iostream>
+	<cstring>
+	<string.h>
+
+1577453672 d:\ramos\codes\assignment 3   abdelrahman ashraf 20180150   g11\student.h
+	<iostream>
+	<cstring>
+	<string.h>
+	"Course.h"
+	"FciVector.h"
+
+1576945908 d:\ramos\codes\assignment 3   abdelrahman ashraf 20180150   g11\course.h
+	<iostream>
+	<cstring>
+	<string.h>
+
